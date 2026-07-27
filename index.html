@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proteus Dynamics — Next-generation restraint technology</title>
+<meta name="description" content="Proteus Dynamics develops smart handcuffs that record their own use and capture evidentiary data at the moment of arrest. RCMP-funded development. Patents filed.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Proteus Dynamics">
+<meta property="og:description" content="Next-generation restraint technology for law enforcement.">
+<meta property="og:image" content="hero.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000;
+    --card:#101010;
+    --rule:#242424;
+    --green:#94FF00;
+    --ink:#FFF;
+    --muted:#9A9A9A;
+    --dim:#5E5E5E;
+    --display:'Rajdhani',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--mono);
+    font-size:15px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    padding:0 24px;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:40px 0 72px}
+
+  /* ---- brand bar ---- */
+  .brand{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:28px 0 48px;
+  }
+  .brand img{height:40px;width:auto;display:block}
+  .brand .loc{
+    font-size:10.5px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--dim);
+    white-space:nowrap;
+  }
+
+  /* ---- hero ---- */
+  h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(36px,6.6vw,64px);
+    line-height:1.03;
+    text-transform:uppercase;
+    letter-spacing:.005em;
+    max-width:none;
+    margin-bottom:28px;
+  }
+  h1 .accent{color:var(--green)}
+
+  .lede{color:var(--muted);max-width:64ch;margin-bottom:14px}
+  .lede strong{color:var(--ink);font-weight:500}
+
+  /* ---- sections ---- */
+  .sec{margin-top:60px}
+  .sec-label{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--dim);
+    margin-bottom:22px;
+  }
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+  /* ---- status log ---- */
+  .log{border-top:1px solid var(--rule)}
+  .row{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:20px;
+    padding:15px 0 15px 16px;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .row::before{
+    content:"";
+    position:absolute;
+    left:0;top:22px;
+    width:5px;height:5px;
+    background:var(--green);
+  }
+  .row dt{
+    font-size:11px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--dim);
+    padding-top:2px;
+  }
+  .row dd{color:var(--ink)}
+
+  /* ---- contact ---- */
+  .contact-name{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:26px;
+    text-transform:uppercase;
+    line-height:1.2;
+  }
+  .contact-role{
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--dim);
+    margin-bottom:16px;
+  }
+  a{
+    color:var(--green);
+    text-decoration:none;
+    border-bottom:1px solid rgba(148,255,0,.32);
+    padding-bottom:1px;
+  }
+  a:hover{border-bottom-color:var(--green)}
+  a:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+
+  .note{
+    margin-top:22px;
+    padding:16px 18px;
+    background:var(--card);
+    border-left:2px solid var(--green);
+    color:var(--muted);
+    font-size:13.5px;
+  }
+
+  footer{
+    margin-top:70px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 22px;
+    justify-content:space-between;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--dim);
+  }
+
+  /* ---- entrance ---- */
+  .fx{opacity:0;transform:translateY(8px);animation:in .5s ease forwards}
+  .fx:nth-child(1){animation-delay:.05s}
+  .fx:nth-child(2){animation-delay:.13s}
+  .fx:nth-child(3){animation-delay:.21s}
+  .fx:nth-child(4){animation-delay:.29s}
+  @keyframes in{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.fx{opacity:1;transform:none;animation:none}}
+
+  @media (max-width:600px){
+    .wrap{padding:28px 0 52px}
+    .row{grid-template-columns:1fr;gap:3px}
+    .brand img{height:32px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="brand">
+    <img src="logo.png" alt="Proteus Dynamics">
+    <span class="loc">Alberta, Canada</span>
+  </header>
+
+  <h1>Next-generation<br><span class="accent">handcuff technology</span><br>for law enforcement</h1>
+
+  <p class="lede">Proteus Smart Handcuffs record their own use. The cuffs log how and when they are applied and are designed to trigger a body-worn camera before the moment of restraint, producing a time-stamped record of an arrest without asking anything of the officer.</p>
+  <p class="lede">The mechanical design also addresses the two most common failures of conventional handcuffs: <strong>injuries caused by overtightening, and errors in application.</strong></p>
+
+  <section class="sec">
+    <div class="sec-label">Status</div>
+    <dl class="log">
+      <div class="row fx"><dt>Development</dt><dd>Funded by the Royal Canadian Mounted Police</dd></div>
+      <div class="row fx"><dt>Testing</dt><dd>Evaluated by 60+ officers and cadets</dd></div>
+      <div class="row fx"><dt>Hardware</dt><dd>40+ working prototypes; manufacturing processes validated</dd></div>
+      <div class="row fx"><dt>Intellectual property</dt><dd>Two patents filed, covering the mechanical/electronic design and the system architecture</dd></div>
+    </dl>
+  </section>
+
+  <section class="sec">
+    <div class="sec-label">Contact</div>
+    <div class="contact-name">Robert Pearce</div>
+    <div class="contact-role">Chief Executive Officer</div>
+    <p><a href="mailto:rpearce@proteusdynamics.ca">rpearce@proteusdynamics.ca</a></p>
+    <p class="note">Detailed technical information, trial data and prototype demonstrations are available under NDA.</p>
+  </section>
+
+  <footer>
+    <span>Proteus Dynamics</span>
+    <span>Calgary, Alberta, Canada</span>
+  </footer>
+
+</div>
+</body>
+</html>
