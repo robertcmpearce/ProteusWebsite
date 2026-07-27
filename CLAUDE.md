@@ -19,6 +19,9 @@ domain **https://proteusdynamics.ca**. Pushing to `main` publishes automatically
 - `hero.png` — product hero image. Currently **not referenced** by the page (the
   hero image was removed) but retained as the `og:image` social-share preview.
 - `favicon.png` — browser tab / apple-touch icon.
+- `logo-email-signature.png` — black-on-white Proteus logo. **Intentionally not
+  referenced** by the page; hosted only so it has a stable URL for use in email
+  signatures. Do not remove as "unused."
 - `CNAME` — GitHub Pages custom-domain file; contains `proteusdynamics.ca`. Do
   not delete it. Note that GitHub's web UI may rewrite this file when the custom
   domain is edited, creating remote commits — `git pull --rebase` before pushing
